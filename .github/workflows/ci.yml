@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Swift version
+        run: swift --version
+
+      # GitHub's macOS runners ship full Xcode, so the SwiftUIMacros plugin is
+      # present and no SDK pin is needed (the build script's SDKROOT pin only
+      # kicks in on Command-Line-Tools-only machines).
+      - name: Build (release)
+        run: swift build -c release
+
+      # In-process self-test: round-trips the .cleanshotz project codec
+      # (write → read → compare layers). Runs headless — no display needed.
+      - name: Run self-test
+        run: |
+          .build/release/CleanShotZ --selftest-project | tee /tmp/selftest.log
+          grep -q "PROJECT SELFTEST OK" /tmp/selftest.log

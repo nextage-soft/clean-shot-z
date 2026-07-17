@@ -1,22 +1,40 @@
-# Swift Package Manager
+# ---- Swift Package Manager ----
 .build/
 .swiftpm/
+# No external dependencies → no Package.resolved to track.
 Package.resolved
 
-# App bundle output (rebuilt by scripts/build-and-bundle-app.sh)
+# ---- Build output (app bundle, generated icon) ----
 build/
 
-# macOS
+# ---- Xcode (if ever opened in Xcode) ----
+*.xcodeproj
+*.xcworkspace
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+*.xcuserstate
+
+# ---- macOS ----
 .DS_Store
+._*
+.Spotlight-V100
+.Trashes
 .AppleDouble
 .LSOverride
 
-# Editors / IDEs
+# ---- Editors ----
 .vscode/
 .idea/
-*.xcodeproj
-*.xcworkspace
+*.swp
+*~
 
-# Logs & temp
+# ---- Logs / temp ----
 *.log
-/tmp/
+
+# ---- Secrets / local ----
+# Never commit signing material or private keys
+*.p12
+*.cer
+*.mobileprovision
+*.entitlements.local

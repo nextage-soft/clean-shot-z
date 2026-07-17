@@ -1,0 +1,17 @@
+CleanShot Z
+Copyright 2026 Tieu Anh Quoc
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+--------------------------------------------------------------------------------
+CleanShot Z has no external Swift dependencies. All application code is original
+or uses Apple system frameworks (AppKit, SwiftUI, ScreenCaptureKit, Vision,
+VisionKit, Core Graphics, Core Image, ImageIO, Carbon, ServiceManagement).
+
+CleanShot Z runs entirely on-device: it makes no network calls, includes no
+analytics or telemetry, and requires no account. Screenshots, recordings,
+recognized text, and project files never leave the user's Mac.
+
+CleanShot Z is an independent project. It is not affiliated with, endorsed by,
+or connected to MTW (makers of CleanShot X); the name references the product
+only to describe the category of tool CleanShot Z belongs to.
