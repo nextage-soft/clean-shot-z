@@ -1,0 +1,22 @@
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# App bundle output (rebuilt by scripts/build-and-bundle-app.sh)
+build/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.xcodeproj
+*.xcworkspace
+
+# Logs & temp
+*.log
+/tmp/
