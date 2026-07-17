@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="CleanShot Z" width="128">
+  <img src="assets/banner.svg" alt="CleanShot Z — the open-source CleanShot X alternative for macOS" width="100%">
 </p>
 
 <h1 align="center">CleanShot Z</h1>
